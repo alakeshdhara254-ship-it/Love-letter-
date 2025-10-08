@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>প্রিয় Tanwishi ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #ffe4e1, #ffb6c1);
+    font-family: 'Noto Sans Bengali', sans-serif;
+    overflow: hidden;
+    perspective: 1000px;
+  }
+
+  /* Floating hearts */
+  .hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .heart {
+    position: absolute;
+    font-size: 24px;
+    color: rgba(255, 182, 193, 0.8);
+    animation: float 10s linear infinite;
+  }
+  @keyframes float {
+    0% { transform: translateY(100vh) scale(0.5); opacity:1; }
+    100% { transform: translateY(-10vh) scale(1.5); opacity:0; }
+  }
+
+  /* Envelope styling */
+  .envelope {
+    width: 220px;
+    height: 130px;
+    background: #ff99c8;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 25px rgba(255, 182, 193,0.5);
+    transition: transform 0.8s ease;
+  }
+  .envelope::before {
+    content: '';
+    position: absolute;
+    width: 0; height: 0;
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    border-bottom: 65px solid #ff6699;
+    top: -65px;
+    left: 0;
+    border-radius: 0 0 12px 12px;
+  }
+
+  /* Letter styling - scroll effect */
+  .letter {
+    display: none;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+    border: 3px solid #ffb6c1;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+    box-shadow: 0 0 40px rgba(255, 182, 193, 0.3);
+    backdrop-filter: blur(5px);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    transform: rotateX(0deg);
+    animation: fadeIn 1.5s ease forwards;
+    font-family: 'Noto Sans Bengali', sans-serif;
+  }
+  .letter::-webkit-scrollbar {
+    width: 10px;
+  }
+  .letter::-webkit-scrollbar-track {
+    background: rgba(255, 182, 193, 0.1);
+    border-radius: 10px;
+  }
+  .letter::-webkit-scrollbar-thumb {
+    background: #ff99c8;
+    border-radius: 10px;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8) rotateX(90deg); }
+    to { opacity: 1; transform: scale(1) rotateX(0deg); }
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff6699;
+    text-shadow: 0 0 15px #ff99c8;
+  }
+
+  .text {
+    white-space: pre-wrap;
+  }
+
+  /* Scroll animation hint */
+  .scroll-hint {
+    text-align: center;
+    font-size: 14px;
+    color: #ff6699;
+    margin-top: 10px;
+    opacity: 0.7;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<!-- Envelope -->
+<div class="envelope" id="envelope">
+  <span>📩 Open Me</span>
+</div>
+
+<!-- Letter -->
+<div class="letter" id="letter">
+  <h1>প্রিয় Tanwishi ❤️</h1>
+  <div class="text">
+প্রিয় Tanwishi ❤️,
+জানো, তুমি শুধু আমার জীবনের একটা অংশ নও — তুমি আমার জীবনের সবচেয়ে সুন্দর অধ্যায়।
+তুমি আসার পর থেকে আমার পৃথিবীটা যেন নতুন করে রঙ পেয়েছে।
+তোমার হাসি☺️, তোমার ছোট ছোট কথা — সবকিছুই আমার কাছে important 😊।
+
+🩵প্রতিদিন সকালে তোমার মুখটা দেখেই মনে হয়, আজ দিনটা ভালো যাবে।
+তুমি পাশে থাকলে আমি সব কিছু পারি, কারণ তুমি আমার সাহস, তুমি আমার শান্তি।❤️
+তুমি জানো না হয়তো, তুমি আমার জীবনের সবচেয়ে বড় পাওয়া।
+যখন ক্লান্ত হই, শুধু তোমার কথা মনে পড়লেই সব কষ্ট মিলিয়ে যায়।🥰
+
+তুমি আমার জীবনের সেই গান, যা বারবার শুনলেও শেষ হয় না।
+তুমি আমার গল্পের নায়িকা, আর আমি শুধু তোমার ভালোবাসায় হারিয়ে যাওয়া এক মানুষ।
+তুমি আমার ঘর, তুমি আমার শান্তির ঠিকানা।😇
+
+আমি চাই, যতদিন বাঁচি, প্রতিদিন তোমাকে নতুন করে ভালোবাসতে পারি।
+তোমার হাত ধরে জীবনটা পার করে দিতে চাই — সুখে, দুঃখে, সব সময়।
+কারণ, তুমি আছো বলেই আমি আজ সম্পূর্ণ🥺। ❤️ 😘
+আমি জানি না আগের জন্মে কী ভালো কাজ করেছিলাম,
+যে তোমাকে পেয়েছি এই জীবনে।
+তুমি শুধু আমার স্ত্রী নও — তুমি আমার ভালোবাসা, আমার সেরা বন্ধু,
+আমার প্রতিদিনের প্রেরণা।
+
+যদি কখনও ভুল করে তোমাকে কষ্ট দিয়ে থাকি,
+জেনো, সেটা কখনও ইচ্ছা করে নয়।
+তুমি আমার জীবনের এমন এক অংশ,
+যাকে ছাড়া আমি এক মুহূর্তও কল্পনা করতে পারি না।
+
+তুমি আমার সব স্বপ্নের শুরু আর শেষ দুটোই।
+চাই, এই সম্পর্কটা সময়ের সঙ্গে আরও গভীর হোক,
+আর আমরা একে অপরের মধ্যে চিরকাল হারিয়ে যাই। ❤️ 
+I LOVE YOU SO SO SO SO MUCH TANWISHI 🥰
+  </div>
+  <div class="scroll-hint">Scroll down to read 💖</div>
+</div>
+
+<!-- Music -->
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2023/04/12/audio_d4dcbb36d2.mp3?filename=romantic-piano-background-music-144123.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const envelope = document.getElementById('envelope');
+  const letter = document.getElementById('letter');
+
+  envelope.addEventListener('click', () => {
+    envelope.style.transform = 'rotateX(180deg)';
+    setTimeout(() => {
+      envelope.style.display = 'none';
+      letter.style.display = 'block';
+    }, 800);
+  });
+
+  // Floating hearts
+  const hearts = document.querySelector('.hearts');
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '💖';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = Math.random() * 30 + 10 + 'px';
+    heart.style.animationDuration = Math.random() * 5 + 5 + 's';
+    hearts.appendChild(heart);
+    setTimeout(() => heart.remove(), 10000);
+  }
+  setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
