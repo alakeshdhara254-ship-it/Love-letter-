@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>প্রিয় Tanwishi ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#ff9fc0;--deep:#ff6b98;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#fff6f8;font-family:'Noto Sans Bengali',sans-serif;overflow:hidden;}
+
+/* LOCK OVERLAY */
+.lock-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.56);display:flex;align-items:center;justify-content:center;z-index:999;}
+.lock-box{width:90%;max-width:400px;background:#fff;border-radius:12px;padding:25px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,0.25);}
+.lock-box h2{color:var(--deep);margin-bottom:10px;}
+.lock-box input{width:100%;padding:12px;margin-bottom:10px;font-size:16px;border-radius:8px;border:1px solid #ddd;}
+.lock-box button{width:100%;padding:11px;border:none;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--deep));color:#fff;font-weight:600;cursor:pointer;}
+.err{color:red;font-size:14px;display:none;margin-top:5px;}
+
+/* Hearts */
+.hearts{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+.heart{position:absolute;font-size:22px;opacity:0.95;animation:float 10s linear infinite;}
+@keyframes float{0%{transform:translateY(110vh) scale(.6);}100%{transform:translateY(-15vh) scale(1.4);opacity:0;}}
+
+/* Envelope */
+.envelope{
+  width:300px;height:180px;background:#ffe6d9;border:2px solid #e6b7a9;border-radius:6px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.25);position:relative;cursor:pointer;display:flex;align-items:center;justify-content:center;transition: transform 0.7s ease;
+}
+.envelope::before{
+  content:"";position:absolute;top:-40px;left:0;right:0;margin:auto;
+  width:0;height:0;border-left:150px solid transparent;border-right:150px solid transparent;border-bottom:60px solid #f7c4b9;border-radius:0 0 6px 6px;box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+.seal{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:55px;height:55px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff5f7,#ffd9e6);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.12);font-size:22px;color:#de4b7b;z-index:2;}
+.envelope.flipped{transform:rotateX(180deg) translateY(-8px);}
+
+/* Letter with proper roule/parchment */
+.letter{
+  display:none;
+  max-width:800px;
+  width:85vw;
+  max-height:80vh;
+  background:#fff6e8; /* light parchment color */
+  border-radius:12px;
+  padding:30px 40px;
+  overflow-y:auto;
+  box-shadow:0 10px 30px rgba(0,0,0,0.18);
+  border:1px solid rgba(0,0,0,0.06);
+  font-size:16px;
+  line-height:1.8;
+  color:#4b2530;
+  /* Roule paper lines */
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,200,150,0.15),
+      rgba(255,200,150,0.15) 2px,
+      transparent 2px,
+      transparent 25px
+    );
+}
+
+/* Scrollbar */
+.letter::-webkit-scrollbar{width:10px;}
+.letter::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#ffb6c1,#ff7a9c);border-radius:10px;}
+.letter::-webkit-scrollbar-track{background:rgba(0,0,0,0.02);border-radius:10px;}
+
+h1{text-align:center;color:#de4b7b;margin-bottom:12px;}
+.text{white-space:pre-wrap;}
+
+/* Responsive */
+@media(max-width:520px){
+  .envelope{width:85vw;height:50vw;}
+  .envelope::before{border-left:42.5vw solid transparent;border-right:42.5vw solid transparent;border-bottom:22vw solid #f7c4b9;top:-22vw;}
+  .seal{width:45px;height:45px;font-size:18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<!-- Password Overlay -->
+<div class="lock-overlay" id="lockOverlay">
+  <div class="lock-box">
+    <h2>পাসওয়ার্ড দিন</h2>
+    <input id="pwInput" type="password" placeholder="পাসওয়ার্ড">
+    <button id="pwBtn">Unlock</button>
+    <div class="err" id="errMsg">পাসওয়ার্ড ভুল। আবার চেক করে চেষ্টা করো।</div>
+  </div>
+</div>
+
+<!-- Envelope -->
+<div id="envelope" class="envelope" aria-hidden="true">
+  <div class="seal">❤️</div>
+</div>
+
+<!-- Letter -->
+<div id="letter" class="letter" aria-hidden="true">
+  <h1>প্রিয় Tanwishi ❤️</h1>
+  <div class="text">
+প্রিয় Tanwishi ❤️,
+জানো, তুমি শুধু আমার জীবনের একটা অংশ নও — তুমি আমার জীবনের সবচেয়ে সুন্দর অধ্যায়।
+তুমি আসার পর থেকে আমার পৃথিবীটা যেন নতুন করে রঙ পেয়েছে।
+তোমার হাসি☺️, তোমার ছোট ছোট কথা — সবকিছুই আমার কাছে important 😊।
+
+🩵প্রতিদিন তোমার মুখটা দেখেই মনে হয়, আজ দিনটা ভালো যাবে।
+তুমি পাশে থাকলে আমি সব কিছু পারি, কারণ তুমি আমার সাহস, তুমিআমার শান্তি।❤️
+তুমি জানো না হয়তো, তুমি আমার জীবনের সবচেয়ে বড় পাওয়া।
+যখন ক্লান্ত হই, শুধু তোমার কথা মনে পড়লেই সব কষ্ট মিলিয়ে যায়।🥰
+
+তুমি আমার জীবনের সেই গান, যা বারবার শুনলেও শেষ হয় না।
+তুমি আমার গল্পের নায়িকা, আর আমি শুধু তোমার ভালোবাসায় হারিয়ে যাওয়া এক মানুষ।
+তুমি আমার ঘর, তুমি আমার শান্তির ঠিকানা।😇
+
+আমি চাই, যতদিন বাঁচি, প্রতিদিন তোমাকে নতুন করে ভালোবাসতে পারি।
+তোমার হাত ধরে জীবনটা পার করে দিতে চাই — সুখে, দুঃখে, সব সময়।
+কারণ, তুমি আছো বলেই আমি আজ সম্পূর্ণ🥺। ❤️ 😘
+আমি জানি না আগের জন্মে কী ভালো কাজ করেছিলাম,
+যে তোমাকে পেয়েছি এই জীবনে।
+তুমি শুধু আমার স্ত্রী নও — তুমি আমার ভালোবাসা, আমার সেরা বন্ধু,
+আমার প্রতিদিনের প্রেরণা।
+
+যদি কখনও ভুল করে তোমাকে কষ্ট দিয়ে থাকি,
+জেনো, সেটা কখনও ইচ্ছা করে নয়।
+তুমি আমার জীবনের এমন এক অংশ,
+যাকে ছাড়া আমি এক মুহূর্তও কল্পনা করতে পারি না।
+
+তুমি আমার সব স্বপ্নের শুরু আর শেষ দুটোই।
+চাই, এই সম্পর্কটা সময়ের সঙ্গে আরও গভীর হোক,
+আর আমরা একে অপরের মধ্যে চিরকাল হারিয়ে যাই। ❤️ 
+I LOVE YOU SO SO SO SO MUCH TANWISHI 🥰
+  </div>
+</div>
+
+<!-- Audio -->
+<audio id="bgAudio" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2023/04/12/audio_d4dcbb36d2.mp3?filename=romantic-piano-background-music-144123.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const SECRET_PASS="Tanwishi21";
+const lockOverlay=document.getElementById('lockOverlay');
+const pwInput=document.getElementById('pwInput');
+const pwBtn=document.getElementById('pwBtn');
+const errMsg=document.getElementById('errMsg');
+const envelope=document.getElementById('envelope');
+const letter=document.getElementById('letter');
+const bgAudio=document.getElementById('bgAudio');
+
+function checkPass(input){ return input.trim()===SECRET_PASS; }
+function unlockUI(){ lockOverlay.style.display='none'; envelope.setAttribute('aria-hidden','false'); envelope.focus(); sessionStorage.setItem('love_unlocked','1'); }
+
+if(sessionStorage.getItem('love_unlocked')==='1'){unlockUI();}
+
+pwBtn.addEventListener('click',()=>{ errMsg.style.display='none'; if(checkPass(pwInput.value)){unlockUI();} else{errMsg.style.display='block'; pwInput.value=''; pwInput.focus();} })
+pwInput.addEventListener('keydown',e=>{if(e.key==='Enter')pwBtn.click()})
+
+envelope.addEventListener('click',()=>{
+  envelope.classList.add('flipped');
+  setTimeout(()=>{
+    envelope.style.display='none';
+    letter.style.display='block';
+    letter.setAttribute('aria-hidden','false');
+    bgAudio.volume=0.12; bgAudio.play().catch(()=>{});
+    letter.scrollTop=0;
+  },650);
+});
+
+// Hearts animation
+const hearts=document.querySelector('.hearts');
+function createHeart(){
+  const h=document.createElement('div'); h.className='heart'; h.innerText='💖';
+  h.style.left=Math.random()*100+'vw';
+  h.style.fontSize=(Math.random()*28+12)+'px';
+  h.style.animationDuration=(Math.random()*6+8)+'s';
+  hearts.appendChild(h); setTimeout(()=>h.remove(),14000);
+}
+setInterval(createHeart,350);
+
+setTimeout(()=>{ if(pwInput)pwInput.focus(); },250);
+</script>
+</body>
+</html>
